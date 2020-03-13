@@ -23,12 +23,16 @@ This sprint challenge is divided up into three parts:  Hash tables coding, block
 ## Interview Questions
 
 Explain in detail the workings of a dynamic array:
-* What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back?
+* What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back? 
+- O(1) < x < O(n)
 * What is the worse case scenario if you try to extend the storage size of a dynamic array?
+- The worst case would be if the array doesn't have any free space so it would have to make more space for new item. Thet process would have time complexity of O(n) then
 
 Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
+- Blockchain is basically a linked list of blocks. Blocks are dictionaries that consist of a header and the body. Since the only proven use case of blockchain is decentralising transactions, that's what get's stored in the body :) Header is where the blocks get linked together using the hash of the previous block and the contents of current block that are hashed together to make the hash of the current block. That way the only way to 'reverse' a transaction from few blocks ago is to find the new hashes of all blocks until the most recent one. Hence, the 'deeper' the tx is, the less reversible it is.
  
 Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
+- I mostly explained PoW in my previous answer. Basically, PoW is that process of finding the hash for the current block. If the network has stable and secure communication, the only possible attack is the so-called 51% attack and occurs when single entity controls more than 50% of mining power on the network. 
 
 ## Project Set Up
 
